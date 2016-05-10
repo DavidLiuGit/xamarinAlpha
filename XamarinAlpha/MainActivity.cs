@@ -53,12 +53,10 @@ namespace XamarinAlpha {
             if (String.IsNullOrWhiteSpace(convertedString)) {                   // if the conversion appears to be INVALID
                 call.Text = "Call!";
                 call.Enabled = false;
-            } else {
-                call.Text = "Call " + convertedString +"!";
+            } else {                                                            // if the covnersion appears to be valid, then append the converted string to the call button, and allow it to be used
+                call.Text = "Call " + convertedString + "!";
                 call.Enabled = true;
             }
-
-            //throw new NotImplementedException();
         }
     }
 }
