@@ -5,12 +5,11 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Content.PM;
 
 namespace XamarinAlpha {
-    [Activity(Label = "XamarinAlpha", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "XamarinAlpha", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : Activity {
-        //int count = 1;
-
         /// <summary>
         /// The following method is called when the activitiy is initialized, and its contents are created
         /// </summary>
