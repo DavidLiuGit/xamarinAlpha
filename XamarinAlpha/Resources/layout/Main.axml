@@ -2,12 +2,42 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-<Button  
-    android:id="@+id/MyButton"
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/Hello"
-    />
+    android:layout_height="fill_parent">
+    <TextClock
+        android:layout_width="match_parent"
+        android:layout_height="60.0dp"
+        android:id="@+id/textClock1"
+        android:textAllCaps="false"
+        android:gravity="center" />
+    <CheckBox
+        android:text="+1 (USA/Canada)"
+        android:layout_width="match_parent"
+        android:layout_height="54.5dp"
+        android:id="@+id/checkBoxUSACAN" />
+    <TextView
+        android:text="Enter a phone-word:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="41.5dp"
+        android:id="@+id/textView1" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="52.0dp"
+        android:id="@+id/textNumber"
+        android:text="1-800-HOTLINE" />
+    <Button
+        android:text="Convert!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonConvert"
+        android:textAllCaps="false" />
+    <ZoomButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/zoomButton1" />
+    <Button
+        android:text="Call!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonCall" />
 </LinearLayout>
