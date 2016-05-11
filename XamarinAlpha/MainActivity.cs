@@ -35,19 +35,26 @@ namespace XamarinAlpha {
 
             // add event listener for "Call ...!" button
             call.Click += Call_Click;
-
         }
 
         private void Call_Click(object sender, EventArgs e) {
+            // create an alert dialog to ask the user if they want to make this call
             var callDiag = new AlertDialog.Builder(this);
             callDiag.SetMessage("Call " + convertedString + "?");
 
-            callDiag.SetNeutralButton("Call ", delegate {
+            // set the action/intent that is executed if the user clicks the "OK/Call" button
+            callDiag.SetNeutralButton("Call", delegate {
                 // create intent to dial phone
                 var callIntent = new Intent(Intent.ActionCall);
                 callIntent.SetData(Android.Net.Uri.Parse("tel:" + convertedString));        // give the intent it's target to dial
                 StartActivity(callIntent);                                      // execute call intent
             });
+
+            // cancel button - delegate no action
+            callDiag.SetNegativeButton("Cancel", delegate { });
+
+            // show the alert dialog
+            callDiag.Show();
         }
 
         /// <summary>
