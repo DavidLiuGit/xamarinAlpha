@@ -10,11 +10,6 @@
         android:id="@+id/textClock1"
         android:textAllCaps="false"
         android:gravity="center" />
-    <CheckBox
-        android:text="+1 (USA/Canada)"
-        android:layout_width="match_parent"
-        android:layout_height="54.5dp"
-        android:id="@+id/checkBoxUSACAN" />
     <TextView
         android:text="Enter a phone-word:"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -31,7 +26,7 @@
     <Button
         android:text="Convert!"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="68.5dp"
         android:id="@+id/buttonConvert"
         android:textAllCaps="false" />
     <ZoomButton
@@ -41,6 +36,6 @@
     <Button
         android:text="Call!"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70.5dp"
         android:id="@+id/buttonCall" />
 </LinearLayout>
