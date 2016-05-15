@@ -47,7 +47,7 @@ namespace XamarinAlpha {
                 // create intent to dial phone
                 var callIntent = new Intent(Intent.ActionCall);
                 callIntent.SetData(Android.Net.Uri.Parse("tel:" + convertedString));        // give the intent it's target to dial
-                StartActivity(callIntent);                                      // execute call intent
+                StartActivity(callIntent);                                                  // execute call intent
             });
 
             // cancel button - delegate no action
@@ -67,7 +67,7 @@ namespace XamarinAlpha {
             Button call = FindViewById<Button>(Resource.Id.buttonCall);
             EditText numText = FindViewById<EditText>(Resource.Id.textNumber);
 
-            convertedString = Core.PhonewordTranslator.ToNumber(numText.Text);  // covnert the string using the method provided
+            convertedString = Core.PhonewordTranslator.ToNumber(numText.Text);  // convert the string using the method provided
 
             if (String.IsNullOrWhiteSpace(convertedString)) {                   // if the conversion appears to be INVALID
                 call.Text = "Call!";
